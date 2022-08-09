@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "test": "yarn jest src/tests",
+    "start:production": "node dist/server.js",
     "start:dev": "nodemon --respawn --transpileOnly --ignore-watch node_modules src/server.js",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored"
   },
