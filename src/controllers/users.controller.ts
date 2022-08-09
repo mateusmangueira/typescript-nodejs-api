@@ -4,7 +4,7 @@ class UserController {
   constructor() { }
 
   public find(req: Request, res: Response) {
-    res.json({
+    return res.json({
       message: 'Users have been found',
       users: [
         {
@@ -19,7 +19,7 @@ class UserController {
 
   public create(req: Request, res: Response) {
     const { name, cpf } = req.body;
-    res.json({
+    return res.json({
       message: 'User has been created succefully',
       user: {
         name,
@@ -31,7 +31,7 @@ class UserController {
 
   public update(req: Request, res: Response) {
     const { id } = req.params;
-    res.json({
+    return res.json({
       message: `User ${id} has been updated`,
       method: req.method,
     });
@@ -39,7 +39,7 @@ class UserController {
 
   public delete(req: Request, res: Response) {
     const { id } = req.params;
-    res.json({
+    return res.json({
       message: `User ${id} has been deleted`,
       method: req.method,
     });
