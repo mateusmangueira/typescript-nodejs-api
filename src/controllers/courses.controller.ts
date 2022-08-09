@@ -18,7 +18,7 @@ class CourseController {
           updatedAt: '2020-01-01',
         },
       ],
-      method: req.method
+      method: req.method,
     });
   }
 
@@ -31,24 +31,23 @@ class CourseController {
         description,
         price,
       },
-      method: req.method
+      method: req.method,
     });
   }
 
   public update(req: Request, res: Response) {
     res.json({
       message: 'Course Updated',
-      method: req.method
+      method: req.method,
     });
   }
 
   public delete(req: Request, res: Response) {
     res.json({
       message: 'Course Deleted',
-      method: req.method
+      method: req.method,
     });
   }
 }
 
 export const courseController: CourseController = new CourseController();
-

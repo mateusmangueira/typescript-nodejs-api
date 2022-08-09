@@ -11,9 +11,9 @@ class UserController {
           id: 1,
           name: 'Mateus',
           cpf: '098.546.254-00',
-        }
+        },
       ],
-      method: req.method
+      method: req.method,
     });
   }
 
@@ -25,7 +25,7 @@ class UserController {
         name,
         cpf,
       },
-      method: req.method
+      method: req.method,
     });
   }
 
@@ -33,7 +33,7 @@ class UserController {
     const { id } = req.params;
     res.json({
       message: `User ${id} has been updated`,
-      method: req.method
+      method: req.method,
     });
   }
 
@@ -41,10 +41,9 @@ class UserController {
     const { id } = req.params;
     res.json({
       message: `User ${id} has been deleted`,
-      method: req.method
+      method: req.method,
     });
   }
 }
 
 export const userController: UserController = new UserController();
-
